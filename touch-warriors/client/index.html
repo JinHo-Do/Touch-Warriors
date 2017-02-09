@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="warriors">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Touch Warriors</title>
+  <link rel="stylesheet" type="text/css" href="./bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <h1 id="title"><a href="#/off">Touch Warriors</a></h1>
+        <div layout="row" ng-cloak="" ng-controller="ButtonController">
+          <md-button flex="50" ng-click="changeClassOff()" ng-class="{'md-raised white' : isClick, 
+            'md-raised md-warn' : !isClick}" href="#/off">OFF</md-button>
+          <md-button flex="50" ng-click="changeClassOn()" ng-class="{'md-raised white' : !isClick, 
+            'md-raised md-warn' : isClick}" href="#/lcd">ON</md-button>  
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <div ng-view></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-route/angular-route.js"></script>
+  <script src="./bower_components/angular-aria/angular-aria.js"></script>
+  <script src="./bower_components/angular-animate/angular-animate.js"></script>
+  <script src="./bower_components/angular-material/angular-material.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  <script src="./app/off/off.js"></script>
+  <script src="./app/lcd/lcd.js"></script>
+  <script src="./app/app.js"></script>
+
+  <script>
+    // Set the configuration for your app
+    // TODO: Replace with your project's config object
+    var config = {
+      apiKey: "AIzaSyAmbTEGHrTW2H9wYQF7jJGXqBmgMJC0GgQ",
+      authDomain: "https://touch-warriors.firebaseapp.com",
+      databaseURL: "https://touch-warriors.firebaseio.com",
+    };
+    
+    firebase.initializeApp(config);
+
+    // Get a reference to the database service
+    var database = firebase.database();
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<md-card display="column" flex="80%" class="card">
+  <md-card-title>
+    <md-card-title-text>
+      <div flex class="lcd padded" md-whiteframe="24">
+        <p>{{message.$value}} <span ng-if="data.$value">{{data.$value}}</span></p>
+      </div>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content layout="row" layout-align="space-between">
+    <div class="padded" md-whiteframe="5" layout="column" flex="50">
+      <md-button class="md-raised md-warn req" ng-click="brake()">어려움</md-button>
+    </div>
+    <div class="padded" md-whiteframe="5dp" flex="50" layout="column">
+      <md-button class="md-raised park" ng-click="park()">휴식</md-button>
+      <md-button class="md-raised md-primary agree" ng-click="up()" type="button" class="btn btn-primary btn-block up">찬성</md-button>
+      <md-button class="md-raised md-primary deny" ng-click="down()" type="button" class="btn btn-danger btn-block down">반대</md-button>
+    </div>
+  </md-card-content>
+</md-card>

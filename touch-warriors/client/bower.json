@@ -1,0 +1,25 @@
+{
+  "name": "touch-warriors",
+  "description": "MVP project",
+  "main": "index.js",
+  "authors": [
+    "doveloper"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "MVP"
+  ],
+  "homepage": "https://github.com/JinHo-Do/week06day1-2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.6.1",
+    "angular-route": "~1.6.1",
+    "angular-material": "^1.1.3"
+  }
+}
